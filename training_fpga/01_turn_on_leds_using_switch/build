@@ -1,0 +1,4 @@
+xvlog ./lab1_matbi.v ./tb_lab1_matbi.v
+xelab tb_lab1_matbi -debug wave -s tb_lab1_matbi
+#xsim tb_lab1_matbi -R  # do not check waveform
+xsim tb_lab1_matbi -gui -wdb simulate_xsim_tb_lab1_matbi.wdb 
