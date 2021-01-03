@@ -1,2 +1,7 @@
 # fpga_basic
-to study xilinx fpga using Zybo Z7-20 board 
+
+Hello~ Everyone
+Let's Study FPGA~! :)
+
+- youtube : https://www.youtube.com/aifpga
+- blog : https://aifpga.tistory.com/
