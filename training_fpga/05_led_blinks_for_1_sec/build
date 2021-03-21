@@ -1,0 +1,4 @@
+xvlog ./lab5_matbi.v ./tb_lab5_matbi.v ./counter_toggle_out.v -d XSIM_MATBI
+xelab tb_lab5_matbi -debug wave -s tb_lab5_matbi
+#xsim tb_lab5_matbi -R  # do not check waveform
+xsim tb_lab5_matbi -gui -wdb simulate_xsim_tb_lab5_matbi.wdb 
