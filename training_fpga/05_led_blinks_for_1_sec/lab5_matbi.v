@@ -22,8 +22,8 @@
 module lab5_matbi(
 	input 		clk,
 	input		reset_n,
-    input [3:0] sws,  
-    output [3:0] leds
+    input [3:0] sw,  
+    output [3:0] led
     );
 `ifdef XSIM_MATBI
 wire [31:0] w_i_cnt_th_25M 	= 32'd25;
@@ -43,9 +43,9 @@ u_counter_toggle_out_25M
 (
 	.clk		(clk),
 	.reset_n	(reset_n),
-	.enable		(sws[0]),
+	.enable		(sw[0]),
 	.i_cnt_th	(w_i_cnt_th_25M),
-	.o_toggle	(leds[0])
+	.o_toggle	(led[0])
 );
 
 counter_toggle_out 
@@ -53,9 +53,9 @@ u_counter_toggle_out_50M
 (
 	.clk		(clk),
 	.reset_n	(reset_n),
-	.enable		(sws[1]),
+	.enable		(sw[1]),
 	.i_cnt_th	(w_i_cnt_th_50M),
-	.o_toggle	(leds[1])
+	.o_toggle	(led[1])
 );
 
 counter_toggle_out 
@@ -63,9 +63,9 @@ u_counter_toggle_out_100M
 (
 	.clk		(clk),
 	.reset_n	(reset_n),
-	.enable		(sws[2]),
+	.enable		(sw[2]),
 	.i_cnt_th	(w_i_cnt_th_100M),
-	.o_toggle	(leds[2])
+	.o_toggle	(led[2])
 );
 
 counter_toggle_out 
@@ -73,9 +73,9 @@ u_counter_toggle_out_200M
 (
 	.clk		(clk),
 	.reset_n	(reset_n),
-	.enable		(sws[3]),
+	.enable		(sw[3]),
 	.i_cnt_th	(w_i_cnt_th_200M),
-	.o_toggle	(leds[3])
+	.o_toggle	(led[3])
 );
      
 endmodule

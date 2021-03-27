@@ -21,8 +21,8 @@
 
 module tb_lab5_matbi();
 reg clk , reset_n;
-reg [3:0] sws;
-wire [3:0] leds;
+reg [3:0] sw;
+wire [3:0] led;
     
 // clk gen
 always
@@ -35,7 +35,7 @@ initial begin
 $display("initialize value [%0d]", $time);
     reset_n = 1;
     clk     = 0;
-	sws 	= 0;
+	sw 	= 0;
 
 // reset_n gen
 $display("Reset! [%0d]", $time);
@@ -46,8 +46,8 @@ $display("Reset! [%0d]", $time);
 # 10
 @(posedge clk);
 
-$display("sws on [%0d]", $time);
-sws = 4'b1111;
+$display("sw on [%0d]", $time);
+sw = 4'b1111;
 
 $display("Start! [%0d]", $time);
 
@@ -64,8 +64,8 @@ end
 lab5_matbi u_lab5_matbi(
 	.clk		(clk),
 	.reset_n	(reset_n),
-	.sws		(sws),  
-	.leds		(leds)
+	.sw			(sw),  
+	.led		(led)
 );
  
       
